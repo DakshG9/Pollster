@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card text-center">
+  <div class="card-body">
+    <h1>Create polls for free.</h1>
+    <p>Please enter register for an account for the full features of Pollster.</p>
+    <p>Enjoy!</p>
+    <p>Email me at: <strong>pollster.register@gmail.com</strong> if you have any issues.</p>
+    <a class="btn btn-dark" href="{% url 'index' %}">
+        Go back to landing page.</a
+    >
+    <a class="btn btn-light" href="{% url 'polls:index' %}">
+        View Available Polls</a
+    >
+    <p>                       </p>
+    <form action="{% url 'signup' %}">
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationServer01">Username</label>
+          <input type="text" class="form-control is-valid" name="username" id="validationServer01" placeholder="Thanos" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="validationServer02">Password</label>
+          <input type="password" class="form-control is-valid" name="password"  id="inputPassword3" placeholder="Purple" required>
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          
+        </div>
+        
+        
+
+        <button class="btn btn-primary" type="submit">Submit form</button>
+
+    </form>
+  
+  </div>
+</div>
+{% endblock %}

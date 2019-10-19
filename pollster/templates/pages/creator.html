@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card text-center">
+  <div class="card-body">
+    <h1>Welcome To The Pollster Creator.</h1>
+    <p>Go to:</p>
+    <p>localhost:8000/creator</p>
+    <p>For the Pollster Creator</p>
+    <a class="btn btn-dark" href="{% url 'polls:index' %}">
+        View Available Polls</a
+      >
+      <a class="btn btn-light" href="{% url 'signup' %}">
+        Sign up for a FREE account.</a
+      >
+      <p></p>
+      <div class="d-flex align-items-center">
+        <strong>Checking connection...</strong>
+        <div class="spinner-border text-primary ml-auto" role="status" aria-hidden="true"></div>
+      </div>
+      <p></p>
+      <div class="alert alert-warning" role="alert">
+            Unable to establish a connection to rerouter.
+      </div>
+      
+  </div>
+  </div>
+{% endblock %}
